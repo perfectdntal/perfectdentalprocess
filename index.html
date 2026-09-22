@@ -17,8 +17,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 // Perfect Dental Process v2 — partagé Supabase, filtre par jour, parcours direct contrôle, historique, statistiques.
-const SUPABASE_URL=(localStorage.getItem('pd-supabase-url')||'YOUR_SUPABASE_PROJECT_URL').replace(/\/rest\/v1\/?$/,'');
-const SUPABASE_KEY=localStorage.getItem('pd-supabase-key')||'YOUR_SUPABASE_PUBLISHABLE_KEY';
+const SUPABASE_URL='https://laynettpvrerphmegajq.supabase.co';
+const SUPABASE_KEY='sb_publishable_zkdHtrsS-ZajKn4cTyhoVA_12hIELfN';
 const DB_CONFIGURED=SUPABASE_URL.startsWith('https://')&&!SUPABASE_URL.includes('YOUR_')&&!!SUPABASE_KEY&&!SUPABASE_KEY.includes('YOUR_');
 const sb=(DB_CONFIGURED&&window.supabase)?window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY):null;
 let online=!!sb,syncChannel=null,jobs=[],view='suivi',page=1,editing=null; const per=5;
